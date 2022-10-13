@@ -1,0 +1,12 @@
+.contactForm{
+  width: 30%;
+  background-color: orange;
+  margin: 10px;
+  padding: 10px; 
+  color: purple;
+}
+
+.candy img{
+  max-width: 200px;
+}
+ 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello Everyone!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="images/FVGCCLogoTransparent.png" />
+    <!-- import the webpage's stylesheet -->
+    <!--   <link rel="stylesheet" href="/zflatly.css" />   -->
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="style.css" />
+    <!--Example of using a second stylesheet; CASCADING allows those styles to override the above Bootstrap stylesheet's definition-->
+    <link id="sitestyle" rel="stylesheet" type="text/css" href="fvgcc.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body onload="loadcss()">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
+      <a class="navbar-brand text-info" href="index.html"
+        >FVGCC Style Playground</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cool-svg.html">Cool SVG</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br />
+    <h1 align="center">✧･ﾟ: Welcome! ✧･ﾟ:*</h1>
+    <marquee direction="left" scrollamount="6"
+      >☆━━━ 💕 Marquees are Amazing! 💕 ━━☆
+    </marquee>
+    <p align="center">
+      <progress id="henry" max="120" value="0"></progress><br />
+      
+      Now, that's <i>progress</i>!
+    </p>
+    <div class="text-center">
+      <button
+        type="button"
+        class="btn btn-danger dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        candy
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" onclick="swapCandyBar('images/Reeses.png')"
+          >Reese's Peanut Butter Cup</a
+        >
+        <a
+          class="dropdown-item"
+          onclick="swapCandyBar('images/ThreeMusketeers.png')"
+          >Three Musketeers</a
+        >
+        <a
+          class="dropdown-item"
+          onclick="swapCandyBar('images/HersheysAlmonds.png')"
+          >Almond Hershey's</a
+        >
+        <a class="dropdown-item" onclick="swapCandyBar('images/Snickers.png')"
+          >Snickers</a
+        >
+        <a
+          class="dropdown-item"
+          onclick="swapCandyBar('images/PeppermintPatty.png')"
+          >York Peppermint Patty</a
+        >
+        <a class="dropdown-item" onclick="swapCandyBar('images/OhHenry.jpg')"
+          >Oh Henry</a
+        >
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button
+        class="btn btn-warning"
+        id="progressbutton"
+        onclick="fillthebag()"
+      >
+        Give me candy!
+      </button>
+    </div>
+    <div class="container m-3 mx-auto" id="candyBag">
+      <div class="row">
+        <div class="col-md-4 candy 10">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 20">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 30">
+          <img src="images/OhHenry.jpg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 candy 40">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 50">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-3 candy 60">
+          <img src="images/OhHenry.jpg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 candy 70">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 80">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 90">
+          <img src="images/OhHenry.jpg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 candy 100">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 110">
+          <img src="images/OhHenry.jpg" />
+        </div>
+        <div class="col-md-4 candy 120">
+          <img src="images/OhHenry.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <br />    
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

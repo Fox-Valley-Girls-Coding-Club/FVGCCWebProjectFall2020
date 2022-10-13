@@ -1,0 +1,19 @@
+.csstransitions #transitional-border {
+  border: solid 2px rgb(224, 224, 224);
+  transition: border-color 2s ease-in-out;
+}
+
+.csstransitions #transitional-border:hover {
+  border: solid 2px #333;
+  transition: border-color 2s ease-in-out;
+}
+
+#divCarousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}

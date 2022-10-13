@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Settings</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="/script.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="images/FVGCCLogoTransparent.png"
+    />
+    <!--  <link rel="stylesheet" href="/zflatly.css" />  -->
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="zflatly.css" />
+    <!--Example of using a second stylesheet; CASCADING allows those styles to override the above Bootstrap stylesheet's definition-->
+    <link id="sitestyle" rel="stylesheet" type="text/css" href="fvgcc.css" />
+    <script>
+      /*
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+  localStorage.setItem('newstyle', sheet)
+//  document.getElementById('pagestyle').innerHTML = localStorage.getItem('newstyle');
+  
+}
+  function loadcss (){
+    var x = localStorage.getItem('newstyle');
+    if (x!=null){
+       document.getElementById('pagestyle').setAttribute('href', x);
+    }
+  }
+  */
+    </script>
+  </head>
+  <body onload="loadcss()">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
+      <a class="navbar-brand text-info" href="index.html"
+        >FVGCC Style Playground</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="settings.html"
+              >Settings<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="cool-svg.html">Cool SVG</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div align="center">
+      <h1>
+        Settings
+      </h1>
+    </div>
+
+    <marquee direction="left" scrollamount="6"
+      >You deserve to feel safe, regardless of gender! 💕
+    </marquee>
+
+    <p align="center">
+      This is the settings page, where you can edit themes and add numbers!
+    </p>
+    <div align="center">
+      <button
+        type="button"
+        class="btn btn-danger dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Themes
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" onclick="swapStyleSheet('zcyborg.css')"
+          >Cyborg</a
+        >
+        <a class="dropdown-item" onclick="swapStyleSheet('zlux.css')">Lux</a>
+        <a class="dropdown-item" onclick="swapStyleSheet('zsketchy.css')"
+          >Sketchy</a
+        >
+        <a class="dropdown-item" onclick="swapStyleSheet('zminty.css')"
+          >Minty</a
+        >
+        <a class="dropdown-item" onclick="swapStyleSheet('zjournal.css')"
+          >Journal</a
+        >
+        <a class="dropdown-item" onclick="swapStyleSheet('style.css')">Basic</a>
+        <a class="dropdown-item" onclick="swapStyleSheet('zflatly.css')"
+          >Flatly</a
+        >
+      </div>
+    </div>
+
+    <p align="center">
+      This resource makes to possible to call 911 along with your 3 closest
+      contacts.
+    </p>
+    <p align="center">
+      Please input your first and last name, along with your phone number.
+    </p>
+    <form align="center" action="/action_page.php">
+      First name: <input class="form-round" type="text" name="fname" /><br />
+      Last name: <input type="text" name="lname" /><br />
+      Phone number: <input type="text" name="phone" /><br />
+      <input
+        type="button"
+        class="button"
+        value="Submit"
+        onclick="savesubmission1()"
+      />
+
+      <p align="center">
+        Please input phone numbers for three of your closest contacts.
+      </p>
+    </form>
+    <form align="center" action="/action_page.php">
+      <p align="center">
+        Contact #1
+      </p>
+      Name: <input type="text" name="name1" /><br />
+      Phone number: <input type="text" name="phone1" id="phone1" /><br />
+      <input
+        type="button"
+        class="button"
+        value="Submit"
+        onclick="savefield('phone1')"
+      />
+    </form>
+    <form align="center" action="/action_page.php">
+      <p align="center">
+        Contact #2
+      </p>
+      Name: <input type="text" name="name2" /><br />
+      Phone number: <input type="text" name="phone2" id="phone2" /><br />
+      <input
+        type="button"
+        class="button"
+        value="Submit"
+        onclick="savefield('phone2')"
+      />
+    </form>
+    <form align="center" action="/action_page.php">
+      <p align="center">
+        Contact #3
+      </p>
+      Name: <input type="text" name="name2" /><br />
+      Phone number: <input type="text" name="phone3" id="phone3" /><br />
+      <input
+        type="button"
+        class="button"
+        value="Submit"
+        onclick="savefield('phone3')"
+      />
+    </form>
+
+    <!--This is an example of a horizontal Bootstrap form with labels to the left of each input field-->
+    <!--To get this alignment we use Bootstrap's GRID layout - rows and columns inside a container-->
+    <div class="container">
+      <!--Wrap the grid rows inside a "container"-->
+      <form align="center" class="mx-auto contactForm">
+        <!--each form group consists of a label and input field; the "row" class is assigned to create the Bootstrap grid"-->
+        <div class="form-group row">
+          <!--The label is assigned class "col-sm-2" which allocates 2 of the row's 12 columns for the label -->
+          <!-- The class "col-form-label" assures that the label lines up with its associated input-->
+          <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
+          <!--The input field is assigned class "col-sm-10" which allocates 10 of the row's 12 columns for the label -->
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              id="inputName"
+              placeholder="Name"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPhone" class="col-sm-2 col-form-label">Phone:</label>
+          <div class="col-sm-10">
+            <input
+              type="tel"
+              class="form-control"
+              id="inputPhone"
+              placeholder="Phone"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <img
+      align="left"
+      src="https://cdn.glitch.com/7bd85fdb-3f72-4c2b-9fa3-54a6ad59f6c7%2FImage%20from%20iOS%20(1).png?v=1580588747879"
+      width="250"
+      height="250"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
